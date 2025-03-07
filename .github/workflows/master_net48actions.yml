@@ -6,7 +6,7 @@ name: Build and deploy ASP app to Azure Web App - Net48Actions
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
@@ -63,7 +63,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Net48Actions'
+          app-name: 'Forwarding'
           slot-name: 'Production'
           package: .
           
