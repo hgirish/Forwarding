@@ -5,7 +5,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:      
-      - name: Set up secret file
+      - name: VIEW SECREETS
         env:
           CLIENT_ID: ${{ secrets.AZURE_CLIENTID }}         
           TENANT_ID: ${{ secrets.AZURE_TENANTID }}
