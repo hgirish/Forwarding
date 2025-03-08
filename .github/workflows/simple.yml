@@ -17,8 +17,11 @@ jobs:
           CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}         
           TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           SUB_ID: ${{ vars.AZURE_SUBSRIPTION_ID }}
+          CID: ${{secrets.AZUREAPPSERVICE_CLIENTID_0B1D508E520740048FA9DB22120F40BF}}
         run: |
           echo $CLIENT_ID  | sed 's/./& /g'
           echo $TENANT_ID  | sed 's/./& /g'
           echo $SUB_ID  | sed 's/./& /g'
+          echo $CID  | sed 's/./& /g'
+          
       
