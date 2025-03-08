@@ -6,7 +6,7 @@ on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
-    environment: production
+    environment: Production
     permissions:
       contents: read
       id-token: write
@@ -14,8 +14,8 @@ jobs:
     steps:      
       - name: VIEW SECREETS
         env:
-          CLIENT_ID: ${{ secrets.AZURE_CLIENTID }}         
-          TENANT_ID: ${{ secrets.AZURE_TENANTID }}
+          CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}         
+          TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
           SUB_ID: ${{ vars.AZURE_SUBSRIPTION_ID }}
         run: |
           echo $CLIENT_ID  | sed 's/./& /g'
