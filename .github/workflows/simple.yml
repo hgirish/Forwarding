@@ -7,6 +7,9 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     environment: production
+    permissions:
+      contents: read
+      issues: write
     steps:      
       - name: VIEW SECREETS
         env:
